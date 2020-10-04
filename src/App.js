@@ -1,16 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.scss";
+import SoundBoard from "./components/soundboard";
 import sportMoments from "./data/sportMomentsData";
-import Moment from "./components/moment";
 import SocialFollow from "./components/socialFollow";
 
 function App() {
-  const [chosen, setChosen] = useState();
-
-  const handleClick = (i) => {
-    setChosen(i);
-  };
-
   return (
     <div className="App">
       <header className="header">
@@ -18,17 +12,7 @@ function App() {
       </header>
       <div className="toolbar"></div>
 
-      <div className="soundboard">
-        {sportMoments.map((moment, index) => (
-          <Moment
-            image={moment.image}
-            sound={moment.sound}
-            key={index}
-            active={index === chosen}
-            onClick={() => handleClick(index)}
-          />
-        ))}
-      </div>
+      <SoundBoard data={sportMoments} />
 
       <footer>
         <SocialFollow />
