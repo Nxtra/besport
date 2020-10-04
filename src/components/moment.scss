@@ -1,0 +1,23 @@
+.item {
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
+}
+
+.item img {
+  max-width: 250px;
+  width: auto;
+  height: auto;
+  border-radius: 50%; // make circle from square
+  cursor: pointer;
+}
+
+.item img.gray {
+  filter: grayscale(100%);
+}
+
+.item img.notgray {
+  filter: grayscale(0%);
+}

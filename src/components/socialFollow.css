@@ -1,0 +1,31 @@
+.social-container {
+  background: #eee;
+  padding: 2rem 4rem;
+  opacity: 0.7;
+}
+
+a.social {
+  margin: 0 1rem;
+  transition: transform 250ms;
+  display: inline-block;
+}
+
+a.social:hover {
+  transform: translateY(-0.2em);
+}
+
+a.youtube {
+  color: #eb3223;
+}
+
+a.linkedin {
+  color: #0072b1;
+}
+
+a.twitter {
+  color: #49a1eb;
+}
+
+a.instagram {
+  color: black;
+}

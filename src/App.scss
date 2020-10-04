@@ -1,0 +1,43 @@
+$color: black;
+
+.App {
+  background-color: #f0d806;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 2em;
+  text-align: center;
+  background: $color;
+  color: rgb(248, 247, 247);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.soundboard {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: grid;
+  place-items: center;
+  background-color: rgb(202, 12, 12);
+  margin-top: auto;
+  color: #fff;
+}
+
+/* @media screen and (min-width: 540px) {
+  // place here CSS rules that only apply to screens above 540px
+  } */

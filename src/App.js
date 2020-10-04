@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.scss";
+import sportMoments from "./data/sportMomentsData";
+import Moment from "./components/moment";
+import SocialFollow from "./components/socialFollow";
 
 function App() {
+  const [chosen, setChosen] = useState();
+
+  const handleClick = (i) => {
+    setChosen(i);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        Ken jij de belgische sportgeschiedenis van het 2de decennium ?!
       </header>
+      <div className="toolbar"></div>
+
+      <div className="soundboard">
+        {sportMoments.map((moment, index) => (
+          <Moment
+            image={moment.image}
+            sound={moment.sound}
+            key={index}
+            active={index === chosen}
+            onClick={() => handleClick(index)}
+          />
+        ))}
+      </div>
+
+      <footer>
+        <SocialFollow />
+      </footer>
     </div>
   );
 }

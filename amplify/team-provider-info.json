@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-besport-dev-115353-authRole",
+            "UnauthRoleArn": "arn:aws:iam::262262740757:role/amplify-besport-dev-115353-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::262262740757:role/amplify-besport-dev-115353-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-besport-dev-115353-deployment",
+            "UnauthRoleName": "amplify-besport-dev-115353-unauthRole",
+            "StackName": "amplify-besport-dev-115353",
+            "StackId": "arn:aws:cloudformation:eu-west-1:262262740757:stack/amplify-besport-dev-115353/83ec8860-0627-11eb-af25-06589ae9ee54",
+            "AmplifyAppId": "d2r9vvn78ei12l"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d2r9vvn78ei12l",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
