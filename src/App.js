@@ -30,7 +30,9 @@ function App() {
 
       <Toolbar
         onSelect={filterOnCategory}
-        categories={sportMoments.map((sportMoment) => sportMoment.category)}
+        categories={[
+          ...new Set(sportMoments.map((sportMoment) => sportMoment.category)),
+        ]}
       />
 
       <SoundBoard chosen={chosen} setChosen={updateChosen} data={data} />
