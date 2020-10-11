@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Moment from "./moment";
 
 function Soundboard(props) {
-  const [data] = useState(props.data);
   const [chosen, setChosen] = useState(-1);
 
   const [audio, setAudio] = useState();
@@ -25,7 +24,7 @@ function Soundboard(props) {
   // Heb ik hier echt twee useEffect's voor nodig?
   useEffect(() => {
     if (chosen >= 0) {
-      setAudio(new Audio(data[chosen].sound));
+      setAudio(new Audio(props.data[chosen].sound));
     }
   }, [chosen]);
 
@@ -44,7 +43,7 @@ function Soundboard(props) {
 
   return (
     <div className="soundboard">
-      {data.map((moment, index) => (
+      {props.data.map((moment, index) => (
         <Moment
           image={moment.image}
           name={moment.name}

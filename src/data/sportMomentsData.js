@@ -33,51 +33,61 @@ const sportMoments = [
     name: "Greg Van Avermaet",
     image: gregvanavermaetImage,
     sound: gregvanavermaetSound,
+    category: "Cycling",
   },
   {
     name: "Nafi Thiam",
     image: nafithiamImage,
     sound: nafithiamSound,
+    category: "Athletics",
   },
   {
     name: "WK voetbal",
     image: wkvoetbalImage,
     sound: wkvoetbalSound,
+    category: "Soccer",
   },
   {
     name: "Philippe Gilbert",
     image: philippegilbertImage,
     sound: philippegilbertSound,
+    category: "Cycling",
   },
   {
     name: "Marieke Vervoort",
     image: mariekevervoortImage,
     sound: mariekevervoortSound,
+    category: "Athletics",
   },
   {
     name: "Nina Derwael",
     image: derwaelImage,
     sound: derwaelSound,
+    category: "Gymnastics",
   },
   {
     name: "Red Lions",
     image: redlionsImage,
     sound: redlionsSound,
+    category: "Hockey",
   },
   {
     name: "Emma Meesseman",
     image: emmameessemanImage,
     sound: emmameessemanSound,
+    category: "Basketball",
   },
   {
     name: "Victor Campenaerts",
     image: campenaertsImage,
     sound: campenaertsSound,
+    category: "Cycling",
   },
   {
     name: "Pieter Timmers",
     image: pietertimmersImage,
     sound: pietertimmersSound,
+    category: "Swimming",
   },
 ];
 

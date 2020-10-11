@@ -1,0 +1,6 @@
+{
+  "rules": {
+    "max-len": [1, { "code": 120, "tabWidth": 4, "ignoreUrls": true }]
+  },
+  "parser": "babel-eslint"
+}
