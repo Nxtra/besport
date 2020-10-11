@@ -7,7 +7,6 @@ class Toolbar extends React.Component {
   }
 
   onSelected = ({ target }) => {
-    console.log(target.value);
     this.props.onSelect(target.value);
   };
 
