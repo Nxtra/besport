@@ -11,9 +11,10 @@ function Soundboard(props) {
   const handleItemClick = (i) => {
     if (chosen === i) {
       console.dir(audio);
-      if (!audio.isPaused) {
+      if (!audio.paused) {
         audio.pause();
-      } else if (audio.isPaused) {
+      } else if (audio.paused) {
+        console.log("audio was paused");
         audio.play();
       }
     }
