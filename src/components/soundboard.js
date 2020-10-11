@@ -9,6 +9,7 @@ function Soundboard(props) {
   const [audio, setAudio] = useState();
 
   const handleItemClick = (i) => {
+    console.log("clicked");
     if (chosen === i) {
       console.dir(audio);
       if (!audio.paused) {
@@ -46,6 +47,7 @@ function Soundboard(props) {
       {data.map((moment, index) => (
         <Moment
           image={moment.image}
+          name={moment.name}
           key={index}
           active={index === chosen}
           onClick={() => handleItemClick(index)}

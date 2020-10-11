@@ -4,21 +4,30 @@ import "./moment.scss";
 class Moment extends React.Component {
   constructor(props) {
     super();
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      hovered: false,
+    };
   }
 
-  handleChange() {
+  handleChange = () => {
     this.props.onClick();
-  }
+  };
 
   render() {
     return (
-      <div className="item">
+      <div
+        className="item"
+        onMouseEnter={() => this.setState({ hovered: true })}
+        onMouseLeave={() => this.setState({ hovered: false })}
+        onClick={this.handleChange}
+      >
+        <div className={this.state.hovered ? `name hovered` : "name"}>
+          {this.props.name}
+        </div>
         <img
           className={`${this.props.active ? "gray" : "notGray"}`}
           src={this.props.image}
           alt="not found"
-          onClick={this.handleChange}
         ></img>
       </div>
     );

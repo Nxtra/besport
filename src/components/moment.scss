@@ -1,17 +1,18 @@
 .item {
-  text-align: center;
+  position: relative;
+  width: 10em;
+  min-width: 10em;
+  height: 10em;
   overflow: hidden;
-  display: flex;
-  align-items: center; /* vertical */
-  justify-content: center; /* horizontal */
+  text-align: center;
+  margin: 0.7rem;
+  border-radius: 50%;
+  border: 0.3em solid rgb(161, 127, 31);
 }
 
 .item img {
-  max-width: 250px;
-  width: auto;
+  width: 100%;
   height: auto;
-  border-radius: 50%; // make circle from square
-  cursor: pointer;
 }
 
 .item img.gray {
@@ -20,4 +21,26 @@
 
 .item img.notgray {
   filter: grayscale(0%);
+}
+
+.item .name {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity linear 0.4s;
+  opacity: 0;
+}
+
+.name.hovered {
+  z-index: 10;
+  opacity: 1;
+}
+
+.item:hover {
+  cursor: pointer;
+  filter: grayscale(100%);
 }
