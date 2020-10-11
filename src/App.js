@@ -8,12 +8,18 @@ import Toolbar from "./components/Toolbar";
 
 function App() {
   const [data, setData] = useState(sportMoments);
+  const [chosen, setChosen] = useState(-1);
 
   const filterOnCategory = (category) => {
     const filteredItems = category
       ? sportMoments.filter((sportMoment) => sportMoment.category === category)
       : sportMoments;
     setData(filteredItems);
+    setChosen(-1);
+  };
+
+  const updateChosen = (index) => {
+    setChosen(index);
   };
 
   return (
@@ -27,7 +33,7 @@ function App() {
         categories={sportMoments.map((sportMoment) => sportMoment.category)}
       />
 
-      <SoundBoard data={data} />
+      <SoundBoard chosen={chosen} setChosen={updateChosen} data={data} />
 
       <footer>
         <SocialFollow />
